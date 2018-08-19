@@ -2,16 +2,16 @@ class Search
   include HTTParty
 
   def initialize(query)
-    @query = query
+    @query = "#{query} memes"
     @base_uri = 'https://api.imgur.com/3/gallery/search/viral/all'
   end
 
   def request
-    response = HTTParty.get(@base_uri,
+    response =  HTTParty.get(@base_uri,
       :query => { q: @query },
       :headers => { 'Authorization' => "Client-ID #{ENV['IMGUR_CLIENT_ID']}" })
     if response.success?
-      response
+      JSON.parse(response.body)
     else
       raise response.response
     end
