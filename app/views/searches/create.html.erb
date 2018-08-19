@@ -16,7 +16,7 @@
           <%= f.hidden_field :title, value: meme['title'] %>
           <%= f.hidden_field :imgur_url, value: meme['link'] %>
           <%= f.hidden_field :image_link, value: meme['images'][0]['link'] %>
-          <%= image_submit_tag("like-button") %>
+          <%= image_submit_tag("like-button", onclick: "this.src='#{image_path("liked-button")}'") %>
         <% end %>
       </div>
     <% end %>

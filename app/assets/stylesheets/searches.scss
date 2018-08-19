@@ -17,14 +17,14 @@ img, video {
   margin-bottom: 2em;
 }
 
-@media(min-width: 600px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1em;
+@media(min-width: 700px) {
+  body {
+    margin: 0 0.5em;
   }
 
-  .image {
+  .container {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 0.5em;
   }
 }
