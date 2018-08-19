@@ -2,6 +2,21 @@
   <h1>Sorry, no memes found for <%= @query %></h1>
 <% else %>
   <% @valid_memes.each_with_index do |meme| %>
-    <div><a href="<%= meme['link'] %>"><img style="width: 50%" src="<%= meme['images'][0]['link'] %>"></a></div>
+    <div>
+      <h3><%= meme['title'] %></h3>
+      <a href="<%= meme['link'] %>">
+        <% if meme['images'][0]['link'].include?('.mp4') %>
+          <%= video_tag(meme['images'][0]['link'], autoplay: true, muted: true, loop: true) %>
+        <% else %>
+          <%= image_tag(meme['images'][0]['link']) %>
+        <% end %>
+      </a>
+      <%= form_for @meme, remote: true, authenticity_token: true, data: { type: :script } do |f| %>
+        <%= f.hidden_field :title, value: meme['title'] %>
+        <%= f.hidden_field :imgur_url, value: meme['link'] %>
+        <%= f.hidden_field :image_link, value: meme['images'][0]['link'] %>
+        <%= image_submit_tag("like-button") %>
+      <% end %>
+    </div>
   <% end %>
 <% end %>

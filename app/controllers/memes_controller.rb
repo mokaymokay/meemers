@@ -3,13 +3,10 @@ class MemesController < ApplicationController
   def index
     @memes = Meme.all
   end
-
-  def new
-    @meme = Meme.new
-  end
   
   def create
     @meme = Meme.new(meme_params)
+    @meme.save
   end
 
   private

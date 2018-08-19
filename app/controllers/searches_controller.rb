@@ -8,6 +8,7 @@ class SearchesController < ApplicationController
     @search_results = Search.new(@query).request
     @memes = @search_results['data']
     @valid_memes = @memes.select { |meme| meme['images'] != nil }
+    @meme = Meme.new
   end
 
 end
