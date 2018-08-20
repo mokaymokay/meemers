@@ -28,3 +28,11 @@ img, video {
     grid-gap: 0.5em;
   }
 }
+
+.search {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%) 
+}
