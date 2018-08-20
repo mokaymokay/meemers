@@ -1,8 +1,10 @@
 <div class="search">
   <h1>Search memes:</h1>
 
-  <%= form_for :search do |f| %>
-    <%= f.text_field :query %>
-    <%= f.submit "Amuse me" %>
+  <%= form_for :search, html: { class: "search-form" } do |f| %>
+    <%= f.text_field :query, placeholder: "Try cats" %>
+    <%= button_tag type: 'submit', class: "search-button" do %>
+        <i class="fa fa-search"></i>
+    <% end %>
   <% end %>
 </div>

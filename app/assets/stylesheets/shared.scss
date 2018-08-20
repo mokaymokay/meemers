@@ -1,4 +1,4 @@
-$main: #D85948;
+@import "variables";
 
 .nav {
   width: 100px;
@@ -14,7 +14,7 @@ $main: #D85948;
     font-size: 1.5em;
     &:hover {
       color: $main;
-      background-color: #eee;
+      background-color: $secondary;
     }
   }
 }
