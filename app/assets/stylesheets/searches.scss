@@ -13,10 +13,6 @@ img, video {
   margin-bottom: 0.5em;
 }
 
-.image {
-  margin-bottom: 2em;
-}
-
 @media(min-width: 700px) {
   body {
     margin: 0 0.5em;
@@ -35,4 +31,20 @@ img, video {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%) 
+}
+
+.icon img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+
+.likes {
+  display: inline-block;
+  left: 0;
+}
+
+.meme {
+  margin-bottom: 2em;
 }

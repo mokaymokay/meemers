@@ -9,6 +9,12 @@ class MemesController < ApplicationController
     @meme.save
   end
 
+  def edit
+    @meme = Meme.find(params[:id])
+    @meme.increment('likes', 1)
+    @meme.save
+  end
+
   private
 
   def meme_params

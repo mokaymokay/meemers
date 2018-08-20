@@ -1,0 +1,3 @@
+meme = document.getElementById('image-<%= @meme.id %>-likes')
+numLikes = parseInt(meme.innerHTML.split(' ')[0]) + 1
+meme.innerHTML = numLikes + ' likes'
