@@ -9,7 +9,7 @@
       <% else %>
         <%= image_tag(meme.image_link) %>
       <% end %>
-      <%= link_to( image_tag("liked-button"), edit_meme_path(meme), class: "icon", remote: true) %>
+      <%= link_to( image_tag("liked-button.png"), edit_meme_path(meme), class: "icon", remote: true) %>
       <p class="likes" id="image-<%=meme.id%>-likes"><%= meme.likes %> likes</p>
     </div>
   <% end %>
