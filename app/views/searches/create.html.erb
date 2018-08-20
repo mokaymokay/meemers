@@ -10,7 +10,7 @@
         <% else %>
           <%= image_tag(meme['images'][0]['link']) %>
         <% end %>
-        <%= form_for @meme, remote: true, authenticity_token: true, data: { type: :script } do |f| %>
+        <%= form_for @meme, url: faves_path, remote: true, authenticity_token: true, data: { type: :script } do |f| %>
           <%= f.hidden_field :title, value: meme['title'] %>
           <%= f.hidden_field :imgur_url, value: meme['link'] %>
           <%= f.hidden_field :image_link, value: meme['images'][0]['link'] %>
