@@ -1,1 +1,16 @@
-<%# display all saved memes=>
+<h1>Faves</h1>
+
+<div class="container">
+  <% @memes.each do |meme| %>
+    <div class="image">
+      <h3><%= meme.title %></h3>
+      <a href="<%= meme.imgur_url %>">
+        <% if meme.image_link.include?('.mp4') %>
+          <%= video_tag(meme.image_link, autoplay: true, muted: true, loop: true) %>
+        <% else %>
+          <%= image_tag(meme.image_link) %>
+        <% end %>
+      </a>
+    </div>
+  <% end %>
+</div>
