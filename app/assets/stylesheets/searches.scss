@@ -30,9 +30,12 @@ img, video {
 .search {
   position: absolute;
   top: 40%;
+}
+
+.middle {
   left: 50%;
   margin-right: -50%;
-  transform: translate(-50%, -50%) 
+  transform: translate(-50%, -50%)
 }
 
 .icon img {
@@ -79,7 +82,28 @@ form.search-form button:hover {
   background: $secondary;
 }
 
-.description p {
-  color: gray;
-  font-size: 0.85em;
+.gray {
+  p {
+    color: gray;
+  }
+}
+
+.description {
+  p {
+    font-size: 0.85em;
+  }
+}
+
+.px200 {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.credits {
+  p {
+    font-size: 0.5em;
+  }
+  bottom: 10px;
+  position: absolute;
 }
