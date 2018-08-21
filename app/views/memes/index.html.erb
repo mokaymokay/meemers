@@ -3,7 +3,7 @@
 <div class="container">
   <% @memes.each do |meme| %>
     <div class="meme">
-      <h3><a href="<%= meme.imgur_url %>" target="_blank"><%= meme.title %></a></h3>
+      <h3 class="link"><a href="<%= meme.imgur_url %>" target="_blank"><%= meme.title %></a></h3>
       <% if meme.image_link.include?('.mp4') %>
         <%= video_tag(meme.image_link, autoplay: true, muted: true, loop: true) %>
       <% else %>

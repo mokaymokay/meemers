@@ -107,3 +107,9 @@ form.search-form button:hover {
   bottom: 10px;
   position: absolute;
 }
+
+.lowercase {
+  p {
+    text-transform: lowercase;
+  }
+}
